@@ -12,19 +12,20 @@ public class ModulusQuizzer
 			System.out.println("Hello, how many questions would you like to have?");
 			int questions = userInput.nextInt();
 			int numberRight = 0;
-			//hello
-			System.out.println("hi");
+			
 			for (int i =0; i<questions; i++)
 				{
 					int randomNumberOne = (int)(Math.random()*10)+1;
-					int randomNumberTwo = (int)(Math.random()*10)+1;
+					int randomNumberTwo = (int)(Math.random()*15)+5;
 					int modAnswer = randomNumberOne%randomNumberTwo;
 					System.out.println("What is " + randomNumberOne + " % " +  randomNumberTwo);
+					
 					int answer = userInput.nextInt();
 					if(answer == modAnswer)
 						{
 							numberRight++;
 							System.out.println("That is correct");
+							System.out.println("What is " + randomNumberOne + " % " + randomNumberOne);
 						}
 					else
 						{
